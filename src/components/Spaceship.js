@@ -1,10 +1,13 @@
 // Code The Spaceship Component Here
 import React from "react";
 
-let colors=['black', 'red']
+
 
 class Spaceship extends React.Component{
+
     render (){
+        const {name,speed,hasRockets,colors}=this.props;
+
         return (
             <div>
                 <h1>Name: {this.props.name}</h1>
@@ -17,12 +20,10 @@ class Spaceship extends React.Component{
     }
 }
 
-export default Spaceship;
-
-
 Spaceship.defaultProps={
     speed: "slow",
     hasRockets: false,
-    colors: colors
-  }
-  
+    colors: ['black', 'red']
+}
+
+export default Spaceship;
